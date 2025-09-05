@@ -1,4 +1,5 @@
-#  Calculadora geométrica avançada com funções para área de círculo, área de triângulo e hipotenusa
+#Calculadora geométrica avançada com funções para área de círculo, área de triângulo e hipotenusa
+
 
 import math
 
