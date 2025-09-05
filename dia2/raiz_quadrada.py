@@ -1,4 +1,5 @@
-#  Calcula o piso, teto e arredondamento de um número real fornecido pelo usuário
+#Calcula o piso, teto e arredondamento de um número real fornecido pelo usuário
+
 
 import math
 
