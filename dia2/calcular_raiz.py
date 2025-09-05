@@ -1,4 +1,4 @@
-#  Calcula a raiz quadrada de um número fornecido pelo usuário
+#   Calcula a raiz quadrada de um número fornecido pelo usuário
 
 
 import math
