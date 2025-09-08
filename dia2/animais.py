@@ -1,3 +1,4 @@
+# dia2/animais.py
 class Animal:
     def __init__(self, nome, idade):
         self.nome = nome
