@@ -7,7 +7,7 @@ class Animal:
         return "Som genérico de animal"
 
     def apresentar(self):
-        return f"Eu sou {self.nome} e tenho {self.idade} anos."
+        return f"Eu sou {self.nome} e tenho {self.idade} anos. 🐾"
 
 class Gato(Animal):
     def falar(self):
