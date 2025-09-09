@@ -15,11 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from primeiro_app import views
+from django.urls import path, include
+from primeiro_app import views as primeiro_views  # primeiro_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.hello_world, name='hello_world'),
-    path('hello/', views.hello_world, name='hello_world_alt'),
+    path('', primeiro_views.pagina_inicial, name='pagina_inicial'),  # página inicial do projeto
+    path('primeiro/', include('primeiro_app.urls')),
+    path('app2/', include('app2.urls')),  # agora o app2 cuida das próprias rotas
+    path('core/', include('dia4.core.urls')),
+
+
 ]

@@ -4,7 +4,8 @@ from django.utils import timezone
 
 # Create your views here.
 
-def hello_world(request):
+def pagina_inicial(request):
+    
 
     agora = timezone.now()
     mensagem = f"""
@@ -50,4 +51,7 @@ def hello_world(request):
     </body>
     </html>
     """
+ 
+
     return HttpResponse(mensagem)
+   

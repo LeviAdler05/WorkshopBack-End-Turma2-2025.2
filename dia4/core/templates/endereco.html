@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Endereço Encontrado</title>
+</head>
+<body>
+    <h1>Endereço Localizado</h1>
+
+    {% if endereco %}
+        <ul>
+            <li><strong>CEP:</strong> {{ endereco.cep }}</li>
+            <li><strong>Logradouro:</strong> {{ endereco.logradouro }}</li>
+            <li><strong>Complemento:</strong> {{ endereco.complemento }}</li>
+            <li><strong>Bairro:</strong> {{ endereco.bairro }}</li>
+            <li><strong>Cidade:</strong> {{ endereco.localidade }}</li>
+            <li><strong>UF:</strong> {{ endereco.uf }}</li>
+            <li><strong>IBGE:</strong> {{ endereco.ibge }}</li>
+            <li><strong>GIA:</strong> {{ endereco.gia }}</li>
+            <li><strong>DDD:</strong> {{ endereco.ddd }}</li>
+            <li><strong>SIAFI:</strong> {{ endereco.siafi }}</li>
+        </ul>
+    {% else %}
+        <p>Nenhum endereço encontrado.</p>
+    {% endif %}
+
+    <a href="{% url 'consultar_enderecos' %}">Voltar</a>
+</body>
+</html>
