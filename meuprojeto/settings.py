@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'primeiro_app',
     'app2',
     'dia4.core',
+    'dia5.viacep',
 ]
 
 MIDDLEWARE = [

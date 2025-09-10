@@ -1,0 +1,11 @@
+{% extends 'viacep/base.html' %}
+{% block content %}
+<h2>Endereços Salvos</h2>
+<ul>
+    {% for e in enderecos %}
+        <li>
+            <a href="{% url 'viacep:detail' e.pk %}">{{ e.cep }} - {{ e.logradouro }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

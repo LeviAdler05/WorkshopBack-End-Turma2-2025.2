@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ViaCEP CRUD</title>
+</head>
+<body>
+    <h1>ViaCEP CRUD</h1>
+    <nav>
+        <a href="{% url 'viacep:create' %}">Consultar CEP</a> |
+        <a href="{% url 'viacep:list' %}">Listar Endereços</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
