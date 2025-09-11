@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CatImages API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #image {
+            margin-top: 30px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens de Gatos</h1>
+    <p>Clique no botão abaixo para ver uma imagem aleatória de gato:</p>
+    <button onclick="getCatImage()">Mostrar Imagem</button>
+    <div><img id="image" src="" alt="Imagem de gato" /></div>
+
+    <script>
+        function getCatImage() {
+            fetch('/api/catimages/', { method: 'POST' })
+                .then(() => fetch('/api/catimages/'))
+                .then(response => response.json())
+                .then(data => {
+                    const lastImage = data[data.length - 1];
+                    document.getElementById('image').src = lastImage.image_url;
+                })
+                .catch(error => {
+                    document.getElementById('image').alt = 'Erro ao obter imagem.';
+                });
+        }
+    </script>
+</body>
+</html>
